@@ -1,16 +1,11 @@
-
-import './App.css';
-
+import React from 'react'
+import Button from '@material-ui/core/Button'
 function App() {
   return (
-    <div className="App">
-     
-        <p>
-          React-admin-dashboard Fanor
-        </p>
-      
+    <div>
+      <Button>Este es un Boton Fanor</Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
