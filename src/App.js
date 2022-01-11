@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 
+import {Icon, IconButton} from "@material-ui/core"
+
 //props de botones color, variant
 //lavesitas truquito para importar todo el conenido de material ui de la carpetita
 function App() {
@@ -53,6 +55,14 @@ function App() {
       <Button variant="contained" color="secondary" size="medium">
        medium
       </Button>
+
+      
+      <Icon>room</Icon>
+
+      <IconButton aria-label="delete" >
+        Delete
+      </IconButton>
+      
     </div>
   );
 }
