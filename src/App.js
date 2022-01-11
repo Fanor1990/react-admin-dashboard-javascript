@@ -1,26 +1,22 @@
 import React from "react";
-import Button from "@material-ui/core/Button"
 
-import { ThemeProvider } from "@material-ui/core/styles"
-import theme from "./temaconfig"
-
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "./temaconfig";
+import Navbar from "./components/Navbar";
+import Button from "@material-ui/core/Button";
 
 function App() {
-
-
   return (
-    
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Navbar />
+
       <Button variant="contained" color="primary">
-        boton
+        buton
       </Button>
       <Button variant="contained" color="secondary">
-        boton
+        buton
       </Button>
-      </ThemeProvider>
-     
-      
-    
+    </ThemeProvider>
   );
 }
 
