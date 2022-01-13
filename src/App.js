@@ -4,8 +4,9 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./temaconfig";
 import Navbar from "./components/Navbar";
 import Button from "@material-ui/core/Button";
-import Typography from '@material-ui/core/Typography'
+
 import Listas from "./components/Listas"
+import Oculto from "./components/Oculto"
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         buton
       </Button>
       <Listas />
-<Typography variant="h1" color="initial">hola fanor</Typography>
+
+      <Oculto />
+
     </ThemeProvider>
   );
 }
