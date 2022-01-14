@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./temaconfig";
 
-import Navbar from "./components/Navbar"
+import Contenedor from "./components/Contenedor"
 
 
 
@@ -13,7 +13,7 @@ function App() {
       
       
 
-      <Navbar/>
+      <Contenedor/>
 
     </ThemeProvider>
   );
