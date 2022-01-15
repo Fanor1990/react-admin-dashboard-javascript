@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Cajon from "./Cajon";
 import { Hidden } from "@material-ui/core";
 import Navbar from "./Navbar";
-import Button from "@material-ui/core/Button"
+
 
 const estilos = makeStyles((theme) => ({
   root: {
@@ -31,7 +31,7 @@ const Contenedor = () => {
      
 
       <div className={classes.root}>
-        <Hidden xsDown>
+        <Hidden xlDown>
           <Cajon 
           variant="permanent"
           open={true}
@@ -39,13 +39,16 @@ const Contenedor = () => {
           />
         </Hidden>
 
-        <Hidden smUp>
+        <Hidden xlUp>
           <Cajon 
           variant="temporary"
           open={abrir}
           onClose={accionAbrir}
           />
         </Hidden>
+        
+
+
 
         <div className={classes.content}>
           <div className={classes.toolbar}> </div>

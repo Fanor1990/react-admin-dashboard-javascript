@@ -4,18 +4,22 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Divider,
+ 
 } from "@material-ui/core";
-import HomeIcon from '@mui/icons-material/Home';
+import HomeWorkRoundedIcon from '@material-ui/icons/HomeWorkRounded'; 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import AddCardIcon from '@mui/icons-material/AddCard';
+import BrandingWatermarkRoundedIcon from '@material-ui/icons/BrandingWatermarkRounded';
+
+
 const Listas = () => {
     return (
-        <div>
-            <List component="nav" aria-label="cicle">
+      <> 
+        
+       
+            <List component="nav" aria-label="cicle" >
             <ListItem button>
               <ListItemIcon>
-                <HomeIcon />
+                <HomeWorkRoundedIcon />
               </ListItemIcon>
               <ListItemText primary="General" />
             </ListItem>
@@ -28,13 +32,14 @@ const Listas = () => {
             </ListItem>
             <ListItem button>
               <ListItemIcon>
-                <AddCardIcon />
+              <BrandingWatermarkRoundedIcon />
               </ListItemIcon>
               <ListItemText primary="Mis Cursos" />
             </ListItem>
           </List>
-          <Divider />
-        </div>
+          
+      
+        </>
       );
     };
 
