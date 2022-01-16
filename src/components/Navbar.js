@@ -25,14 +25,14 @@ const Navbar = (props) => {
     <div className={classes.root} >
       <AppBar position="static"  variant="contained" color="contained">
       <Toolbar>
-          <IconButton edge="start"   variant="contained"aria-label="menu"  onClick={() => props.accionAbrir()}>
-            <MenuIcon />
-          </IconButton>
+          
+          
           <Typography variant="h8" className={classes.title}>
           <Button>DevFanor</Button>
           </Typography>
-          <Button>Usuario
-          </Button>
+          <IconButton edge="start"   variant="contained"aria-label="menu"  onClick={() => props.accionAbrir()} clone>
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
