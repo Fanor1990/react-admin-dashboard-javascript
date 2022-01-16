@@ -1,20 +1,25 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Drawer, Divider } from "@material-ui/core";
+import { Drawer, Divider, ListItemIcon } from "@material-ui/core";
 import Listas from "./Listas";
 
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import {Typography, Button} from "@material-ui/core";
+
+import {Box} from "@material-ui/core";
 
 
 const estilos = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+  },
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up('xlUp')]:{
-      display:'none',
+      display:'flex',
     },
 
 
@@ -39,7 +44,7 @@ const Cajon = (props) => {
 
   
   return (
-    
+    <div className={classes.root}>
     <Drawer 
       className={classes.drawer}
       variant="permanent"
@@ -52,26 +57,36 @@ const Cajon = (props) => {
       onClose={props.onClose ? props.onClose : null }
       
     >
+       <Typography>
+    <Box
+          
+          color="primary.contrastText"
+         m={1}
+
+          >
     
-        
-    
-      <Toolbar ><IconButton edge="start" edge="start" onClick={props.onClose} className={classes.menuButton} color="inherit" >
+   
+     <IconButton  onClick={props.onClose}  color="inherit" >
     <MenuIcon/>
     </IconButton>
+    <Button>DevFanor</Button>
+    </Box>
+    <Divider />    
     
-    <Typography variant="h6" className={classes.title}>
-            DevFanor
-          </Typography>
-    </Toolbar >
+    
+    
+    
+    <Listas  />
+    </Typography>
       
-      
-      <Divider />
+     
      
       
 
-      <Listas  edge="start"/>
+      
       
     </Drawer>
+    </div>
     
   );
 };

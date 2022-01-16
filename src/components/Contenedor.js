@@ -3,13 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Cajon from "./Cajon";
 import { Hidden } from "@material-ui/core";
 import Navbar from "./Navbar";
+import {Typography, Button} from "@material-ui/core";
 
-
+import Toolbar from '@material-ui/core/Toolbar';
 const estilos = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
-  toolbar: theme.mixins.toolbar,
+  
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
@@ -47,12 +48,12 @@ const Contenedor = () => {
           />
         </Hidden>
         
-
-
-
-        <div className={classes.content}>
-          <div className={classes.toolbar}> </div>
-          Contenedor Contenido
+        
+        <Button>DevFanor</Button>
+        
+        <div className={classes.content}>Contenedor Contenido
+          
+          
       
         </div>
       </div>

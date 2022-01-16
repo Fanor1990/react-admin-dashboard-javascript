@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./temaconfig";
 
 import Contenedor from "./components/Contenedor"
+import Navbar from "./components/Navbar"
 
 
 
