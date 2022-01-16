@@ -4,19 +4,17 @@ import Cajon from "./Cajon";
 import { Hidden } from "@material-ui/core";
 import Navbar from "./Navbar";
 import {Typography, Button} from "@material-ui/core";
-
+import Cajitas from "./Cajitas"
 import Toolbar from '@material-ui/core/Toolbar';
 const estilos = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
   
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
-  },
-}));
+    toolbar: theme.mixins.toolbar,
+    content: {
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.default,
+        padding: theme.spacing(3),
+      },
+}))
 
 const Contenedor = () => {
   const classes = estilos();
@@ -29,9 +27,9 @@ const Contenedor = () => {
     
   <>
       <Navbar accionAbrir={accionAbrir} />
-     
+      
 
-      <div className={classes.root}>
+    
         <Hidden xlDown>
           <Cajon 
           variant="permanent"
@@ -49,15 +47,17 @@ const Contenedor = () => {
         </Hidden>
         
         
-        <Button>DevFanor</Button>
+       
         
-        <div className={classes.content}>Contenedor Contenido
+        
           
-          
-      
+        <div className={classes.content}>
+        
+
+            <div className={classes.toolbar}> </div>
+            <Cajitas />
         </div>
-      </div>
-      
+    
       </>
   );
 };
