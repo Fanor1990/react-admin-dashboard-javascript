@@ -1,62 +1,41 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles } from "@material-ui/core/styles";
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import {Box} from "@material-ui/core";
-import {Typography, Button} from "@material-ui/core";
+
+
 const estilos = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    flexGrow: 1,
+  },
+  
+  title: {
+    flexGrow: 1,
   },
 }));
 
-
-
-
-
 const Navbar = (props) => {
   const classes = estilos();
- 
-  
 
   return (
-    
-    <div className={classes.root}>
-      <AppBar color="contained" >
-      
-      <Typography>
-            
-            <Box
-          
-          color="primary.contrastText"
-         m={1}
-
-          >
-            <IconButton
-            color="inherit"
-            
-            onClick={() => props.accionAbrir()}
-          
-        >
-          
-          <MenuIcon /> 
-         
+    <div className={classes.root} >
+      <AppBar position="static"  variant="contained" color="contained">
+      <Toolbar>
+          <IconButton edge="start"   variant="contained"aria-label="menu"  onClick={() => props.accionAbrir()}>
+            <MenuIcon />
           </IconButton>
-         
+          <Typography variant="h8" className={classes.title}>
           <Button>DevFanor</Button>
-          </Box>
-         
           </Typography>
-         
-          
-        
-        
+          <Button>Usuario
+          </Button>
+        </Toolbar>
       </AppBar>
-      
-      
-     </div>
+    </div>
   );
 }
-export default Navbar
+export default Navbar;

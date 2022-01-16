@@ -3,62 +3,43 @@ import { makeStyles } from "@material-ui/core/styles";
 import Cajon from "./Cajon";
 import { Hidden } from "@material-ui/core";
 import Navbar from "./Navbar";
-import {Typography, Button} from "@material-ui/core";
-import Cajitas from "./Cajitas"
-import Toolbar from '@material-ui/core/Toolbar';
+
+import Cajitas from "./Cajitas";
+
 const estilos = makeStyles((theme) => ({
-  
-    toolbar: theme.mixins.toolbar,
-    content: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.default,
-        padding: theme.spacing(3),
-      },
-}))
+  toolbar: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing(3),
+  },
+}));
 
 const Contenedor = () => {
   const classes = estilos();
   const [abrir, setAbrir] = React.useState(false);
 
   const accionAbrir = () => {
-            setAbrir(!abrir)
-  }
+    setAbrir(!abrir);
+  };
   return (
-    
-  <>
+    <>
       <Navbar accionAbrir={accionAbrir} />
-      
 
-    
-        <Hidden xlDown>
-          <Cajon 
-          variant="permanent"
-          open={true}
+      <Hidden xlDown>
+        <Cajon variant="permanent" open={true} />
+      </Hidden>
 
-          />
-        </Hidden>
+      <Hidden xlUp>
+        <Cajon variant="temporary" open={abrir} onClose={accionAbrir} />
+      </Hidden>
 
-        <Hidden xlUp>
-          <Cajon 
-          variant="temporary"
-          open={abrir}
-          onClose={accionAbrir}
-          />
-        </Hidden>
+      <div className={classes.content}>
+      <Cajitas />
+        <div className={classes.toolbar}> </div>
         
-        
-       
-        
-        
-          
-        <div className={classes.content}>
-        
-
-            <div className={classes.toolbar}> </div>
-            <Cajitas />
-        </div>
-    
-      </>
+      </div>
+    </>
   );
 };
 

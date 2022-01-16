@@ -48,7 +48,7 @@ const Cajitas = () => {
         
         
         <Grid item xs={12} md={3} >
-          <Paper  elevation={8} className={classes.paper} square>Calendario</Paper>
+          <Paper  elevation={8} className={classes.paper} square>Actividad Recientes</Paper>
         </Grid>
         
         
