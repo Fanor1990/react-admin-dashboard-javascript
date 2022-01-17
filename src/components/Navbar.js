@@ -24,7 +24,7 @@ const Navbar = (props) => {
 
   return (
     <div className={classes.root} >
-      <AppBar   variant="contained" color="contained"  elevation={20}>
+      <AppBar position="static"   variant="contained" color="contained"  elevation={20}>
       <Toolbar>
           
           

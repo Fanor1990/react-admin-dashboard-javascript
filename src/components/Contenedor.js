@@ -35,11 +35,11 @@ const Contenedor = () => {
       </Hidden>
       
       <div className={classes.content}>
-      
+      <Cajitas />
       
         <div className={classes.toolbar}> </div>
         
-<Cajitas />
+
        
       </div>
     </>
