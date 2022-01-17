@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Cajon from "./Cajon";
-import { Hidden } from "@material-ui/core";
+import { Hidden, Box, Typography } from "@material-ui/core";
 import Navbar from "./Navbar";
 
 import Cajitas from "./Cajitas";
@@ -11,7 +11,7 @@ const estilos = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
   },
 }));
 
@@ -25,7 +25,7 @@ const Contenedor = () => {
   return (
     <>
       <Navbar accionAbrir={accionAbrir} />
-
+     
       <Hidden xlDown>
         <Cajon variant="permanent" open={true} />
       </Hidden>
@@ -33,11 +33,14 @@ const Contenedor = () => {
       <Hidden xlUp>
         <Cajon variant="temporary" open={abrir} onClose={accionAbrir} />
       </Hidden>
-
+      
       <div className={classes.content}>
-      <Cajitas />
+      
+      
         <div className={classes.toolbar}> </div>
         
+<Cajitas />
+       
       </div>
     </>
   );
