@@ -6,7 +6,7 @@ function App() {
     <div className="App">
      
         <p>
-          React-admin-dashboard Fanor
+          React-admin-dashboard Fanor chque
         </p>
       
     </div>
